@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "question": "Choose the synonym for 'adverse'.",
+    "options": ["unfavorable", "beneficial", "helpful", "positive"],
+    "answer": "unfavorable"
+  },
+  {
+    "id": 2,
+    "question": "Choose the synonym for 'benevolent'.",
+    "options": ["kind", "selfish", "cruel", "rude"],
+    "answer": "kind"
+  },
+  {
+    "id": 3,
+    "question": "Choose the synonym for 'conceal'.",
+    "options": ["hide", "reveal", "expose", "uncover"],
+    "answer": "hide"
+  },
+  {
+    "id": 4,
+    "question": "Choose the synonym for 'diminish'.",
+    "options": ["reduce", "increase", "expand", "enlarge"],
+    "answer": "reduce"
+  },
+  {
+    "id": 5,
+    "question": "Choose the synonym for 'eminent'.",
+    "options": ["famous", "unknown", "ordinary", "obscure"],
+    "answer": "famous"
+  },
+  {
+    "id": 6,
+    "question": "Choose the synonym for 'feasible'.",
+    "options": ["possible", "impossible", "unrealistic", "hopeless"],
+    "answer": "possible"
+  },
+  {
+    "id": 7,
+    "question": "Choose the synonym for 'hinder'.",
+    "options": ["obstruct", "assist", "help", "support"],
+    "answer": "obstruct"
+  },
+  {
+    "id": 8,
+    "question": "Choose the synonym for 'meticulous'.",
+    "options": ["careful", "careless", "rough", "hasty"],
+    "answer": "careful"
+  },
+  {
+    "id": 9,
+    "question": "Choose the synonym for 'notion'.",
+    "options": ["idea", "reality", "proof", "truth"],
+    "answer": "idea"
+  },
+  {
+    "id": 10,
+    "question": "Choose the synonym for 'obsolete'.",
+    "options": ["outdated", "modern", "current", "new"],
+    "answer": "outdated"
+  }
+]

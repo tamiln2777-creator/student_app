@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "question": "Choose the synonym for 'happy'.",
+    "options": ["sad", "joyful", "angry", "tired"],
+    "answer": "joyful"
+  },
+  {
+    "id": 2,
+    "question": "Choose the synonym for 'big'.",
+    "options": ["tiny", "huge", "small", "little"],
+    "answer": "huge"
+  },
+  {
+    "id": 3,
+    "question": "Choose the synonym for 'fast'.",
+    "options": ["quick", "slow", "lazy", "late"],
+    "answer": "quick"
+  },
+  {
+    "id": 4,
+    "question": "Choose the synonym for 'smart'.",
+    "options": ["clever", "dull", "foolish", "boring"],
+    "answer": "clever"
+  },
+  {
+    "id": 5,
+    "question": "Choose the synonym for 'beautiful'.",
+    "options": ["ugly", "lovely", "plain", "dull"],
+    "answer": "lovely"
+  },
+  {
+    "id": 6,
+    "question": "Choose the synonym for 'angry'.",
+    "options": ["furious", "happy", "calm", "kind"],
+    "answer": "furious"
+  },
+  {
+    "id": 7,
+    "question": "Choose the synonym for 'cold'.",
+    "options": ["hot", "warm", "chilly", "boiling"],
+    "answer": "chilly"
+  },
+  {
+    "id": 8,
+    "question": "Choose the synonym for 'rich'.",
+    "options": ["poor", "wealthy", "cheap", "hungry"],
+    "answer": "wealthy"
+  },
+  {
+    "id": 9,
+    "question": "Choose the synonym for 'begin'.",
+    "options": ["start", "end", "finish", "close"],
+    "answer": "start"
+  },
+  {
+    "id": 10,
+    "question": "Choose the synonym for 'help'.",
+    "options": ["aid", "harm", "stop", "ignore"],
+    "answer": "aid"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "question": "Choose the synonym for 'brave'.",
+    "options": ["cowardly", "fearless", "timid", "weak"],
+    "answer": "fearless"
+  },
+  {
+    "id": 2,
+    "question": "Choose the synonym for 'ancient'.",
+    "options": ["modern", "old", "recent", "new"],
+    "answer": "old"
+  },
+  {
+    "id": 3,
+    "question": "Choose the synonym for 'confused'.",
+    "options": ["clear", "perplexed", "certain", "sure"],
+    "answer": "perplexed"
+  },
+  {
+    "id": 4,
+    "question": "Choose the synonym for 'generous'.",
+    "options": ["selfish", "kind", "greedy", "rude"],
+    "answer": "kind"
+  },
+  {
+    "id": 5,
+    "question": "Choose the synonym for 'delicious'.",
+    "options": ["tasty", "awful", "bitter", "smelly"],
+    "answer": "tasty"
+  },
+  {
+    "id": 6,
+    "question": "Choose the synonym for 'protect'.",
+    "options": ["guard", "attack", "break", "ignore"],
+    "answer": "guard"
+  },
+  {
+    "id": 7,
+    "question": "Choose the synonym for 'famous'.",
+    "options": ["unknown", "celebrated", "hidden", "secret"],
+    "answer": "celebrated"
+  },
+  {
+    "id": 8,
+    "question": "Choose the synonym for 'polite'.",
+    "options": ["rude", "courteous", "angry", "impolite"],
+    "answer": "courteous"
+  },
+  {
+    "id": 9,
+    "question": "Choose the synonym for 'calm'.",
+    "options": ["relaxed", "nervous", "anxious", "upset"],
+    "answer": "relaxed"
+  },
+  {
+    "id": 10,
+    "question": "Choose the synonym for 'vacant'.",
+    "options": ["filled", "empty", "busy", "occupied"],
+    "answer": "empty"
+  }
+]

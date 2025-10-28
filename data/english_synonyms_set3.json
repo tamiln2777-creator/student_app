@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "question": "Choose the synonym for 'angry'.",
+    "options": ["furious", "happy", "calm", "tired"],
+    "answer": "furious"
+  },
+  {
+    "id": 2,
+    "question": "Choose the synonym for 'brilliant'.",
+    "options": ["dull", "intelligent", "weak", "boring"],
+    "answer": "intelligent"
+  },
+  {
+    "id": 3,
+    "question": "Choose the synonym for 'silent'.",
+    "options": ["quiet", "noisy", "loud", "busy"],
+    "answer": "quiet"
+  },
+  {
+    "id": 4,
+    "question": "Choose the synonym for 'protect'.",
+    "options": ["defend", "attack", "ignore", "harm"],
+    "answer": "defend"
+  },
+  {
+    "id": 5,
+    "question": "Choose the synonym for 'honest'.",
+    "options": ["truthful", "dishonest", "clever", "lazy"],
+    "answer": "truthful"
+  },
+  {
+    "id": 6,
+    "question": "Choose the synonym for 'difficult'.",
+    "options": ["hard", "easy", "simple", "smooth"],
+    "answer": "hard"
+  },
+  {
+    "id": 7,
+    "question": "Choose the synonym for 'vacant'.",
+    "options": ["empty", "busy", "filled", "occupied"],
+    "answer": "empty"
+  },
+  {
+    "id": 8,
+    "question": "Choose the synonym for 'expand'.",
+    "options": ["enlarge", "reduce", "shrink", "minimize"],
+    "answer": "enlarge"
+  },
+  {
+    "id": 9,
+    "question": "Choose the synonym for 'famous'.",
+    "options": ["popular", "unknown", "hidden", "secret"],
+    "answer": "popular"
+  },
+  {
+    "id": 10,
+    "question": "Choose the synonym for 'ignore'.",
+    "options": ["neglect", "notice", "observe", "regard"],
+    "answer": "neglect"
+  }
+]

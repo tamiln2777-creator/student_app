@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>{{ subject }} Sets</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>{{ subject }} - Quiz Sets</h1>
+    <ul class="sets-list">
+      {% for actual_name, display_name in combined_sets %}
+        <li>
+          <a class="set-link" href="{{ url_for('quiz', setname=actual_name) }}">
+            {{ display_name }}
+          </a>
+        </li>
+      {% else %}
+        <li>No sets found for {{ subject }}.</li>
+      {% endfor %}
+    </ul>
+    <a class="back" href="{{ url_for('index') }}">← Back</a>
+  </div>
+</body>
+</html>

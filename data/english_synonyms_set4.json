@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "question": "Choose the synonym for 'brisk'.",
+    "options": ["energetic", "slow", "lazy", "weak"],
+    "answer": "energetic"
+  },
+  {
+    "id": 2,
+    "question": "Choose the synonym for 'cautious'.",
+    "options": ["careful", "reckless", "bold", "careless"],
+    "answer": "careful"
+  },
+  {
+    "id": 3,
+    "question": "Choose the synonym for 'diligent'.",
+    "options": ["hardworking", "lazy", "idle", "inactive"],
+    "answer": "hardworking"
+  },
+  {
+    "id": 4,
+    "question": "Choose the synonym for 'grateful'.",
+    "options": ["thankful", "rude", "careless", "unhappy"],
+    "answer": "thankful"
+  },
+  {
+    "id": 5,
+    "question": "Choose the synonym for 'immense'.",
+    "options": ["huge", "tiny", "small", "narrow"],
+    "answer": "huge"
+  },
+  {
+    "id": 6,
+    "question": "Choose the synonym for 'liberty'.",
+    "options": ["freedom", "captivity", "bondage", "restraint"],
+    "answer": "freedom"
+  },
+  {
+    "id": 7,
+    "question": "Choose the synonym for 'modest'.",
+    "options": ["humble", "arrogant", "proud", "boastful"],
+    "answer": "humble"
+  },
+  {
+    "id": 8,
+    "question": "Choose the synonym for 'rapid'.",
+    "options": ["fast", "slow", "lazy", "steady"],
+    "answer": "fast"
+  },
+  {
+    "id": 9,
+    "question": "Choose the synonym for 'scarce'.",
+    "options": ["rare", "common", "plentiful", "frequent"],
+    "answer": "rare"
+  },
+  {
+    "id": 10,
+    "question": "Choose the synonym for 'vivid'.",
+    "options": ["bright", "dull", "faint", "colorless"],
+    "answer": "bright"
+  }
+]

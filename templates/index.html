@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Student App - Home</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Student App</h1>
+    <p><b>what would you like to learn today?</b></p>
+    <div class="buttons">
+      <a class="big-btn" href="{{ url_for('show_sets', subject='english') }}">English</a>
+      <a class="big-btn" href="{{ url_for('show_sets', subject='maths') }}">Maths</a>
+    </div>
+  </div>
+</body>
+</html>

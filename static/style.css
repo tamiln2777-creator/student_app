@@ -1,0 +1,128 @@
+/* Basic, clean styling */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f6f8fb;
+  color: #222;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 820px;
+  margin: 24px auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(28,34,48,0.08);
+  padding: 28px;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #1f2937;
+}
+
+.buttons {
+  display: flex;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.big-btn {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.sets-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sets-list li {
+  margin: 10px 0;
+}
+
+.set-link {
+  text-decoration: none;
+  color: #0f172a;
+  padding: 10px 12px;
+  display: inline-block;
+  border-radius: 6px;
+  border: 1px solid transparent;
+}
+
+.set-link:hover {
+  border-color: #e6eefc;
+  background: #f8fafc;
+}
+
+.question-block {
+  border-bottom: 1px dashed #e6eefc;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+
+.q-text {
+  margin: 6px 0;
+}
+
+.option {
+  display: block;
+  margin: 6px 0;
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  margin-right: 8px;
+}
+
+.form-actions {
+  margin-top: 18px;
+}
+
+.submit-btn {
+  padding: 10px 16px;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.back {
+  display: inline-block;
+  margin-top: 12px;
+  color: #4b5563;
+  text-decoration: none;
+}
+
+.results {
+  margin-top: 16px;
+}
+
+.result-item {
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.result-item.correct {
+  background: #ecfdf5;
+  border: 1px solid #bbf7d0;
+}
+
+.result-item.wrong {
+  background: #fff1f2;
+  border: 1px solid #fecaca;
+}
+
+.score {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
