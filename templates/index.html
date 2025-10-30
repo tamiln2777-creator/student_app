@@ -2,17 +2,90 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Student App - Home</title>
+  <title>Student App</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
   <div class="container">
-    <h1>Student App</h1>
-    <p><b>What would you like to learn today?</b></p>
-    <div class="buttons">
-      <a class="big-btn" href="{{ url_for('show_sets', subject='english') }}">English</a>
-      <a class="big-btn" href="{{ url_for('show_sets', subject='maths') }}">Maths</a>
-    </div>
+
+    {# 🏠 HOME PAGE #}
+    {% if page == "home" %}
+      <h1>Student App</h1>
+      <p><b>What would you like to learn today?</b></p>
+      <div class="button-group">
+        <!-- Sky blue English button -->
+        <a href="{{ url_for('show_sets', subject='english') }}" class="btn english">English</a>
+        <!-- Yellow Maths button -->
+        <a href="{{ url_for('show_sets', subject='maths') }}" class="btn maths">Maths</a>
+      </div>
+    {% endif %}
+
+    {# 📚 SETS PAGE #}
+    {% if page == "sets" %}
+      <h1>{{ subject }} - Quiz Sets</h1>
+      <ul class="sets-list">
+        {% for actual_name, display_name in combined_sets %}
+          <li>
+            {% if subject.lower() == 'english' %}
+              <!-- Grey English sets -->
+              <a class="set-link english" href="{{ url_for('quiz', setname=actual_name) }}">{{ display_name }}</a>
+            {% elif subject.lower() == 'maths' %}
+              <!-- Green Maths sets -->
+              <a class="set-link maths" href="{{ url_for('quiz', setname=actual_name) }}">{{ display_name }}</a>
+            {% else %}
+              <a class="set-link" href="{{ url_for('quiz', setname=actual_name) }}">{{ display_name }}</a>
+            {% endif %}
+          </li>
+        {% else %}
+          <li>No sets found for {{ subject }}.</li>
+        {% endfor %}
+      </ul>
+      <a class="back" href="{{ url_for('index') }}">← Back</a>
+    {% endif %}
+
+    {# 📝 QUIZ PAGE #}
+    {% if page == "quiz" %}
+      <h1>{{ setname.replace('_', ' ') }}</h1>
+      <form method="POST">
+        {% for q in questions %}
+          <div class="question-block">
+            <p><strong>Q{{ loop.index }}.</strong> {{ q.question }}</p>
+            {% for option in q.options %}
+              <label class="option">
+                <input type="radio" name="q_{{ q.id }}" value="{{ option }}" required> {{ option }}
+              </label>
+            {% endfor %}
+          </div>
+        {% endfor %}
+        <div class="form-actions">
+          <button type="submit" class="submit-btn">Submit Quiz</button>
+        </div>
+      </form>
+      <a class="back" href="{{ url_for('index') }}">← Back</a>
+    {% endif %}
+
+    {# 🏆 RESULT PAGE #}
+    {% if page == "result" %}
+      <h1>Result - {{ setname.replace('_', ' ') }}</h1>
+      <h3 class="score">Your Score: {{ score }}/{{ total }}</h3>
+      <ul class="results">
+        {% for q in details %}
+          <li class="result-item {{ 'correct' if q.is_correct else 'wrong' }}">
+            <p><strong>{{ q.question }}</strong></p>
+            <p>Your Answer:
+              <span style="color:{{ 'green' if q.is_correct else 'red' }}">
+                {{ q.user_answer or 'Not answered' }}
+              </span>
+            </p>
+            {% if not q.is_correct %}
+              <p>Correct Answer: <b>{{ q.correct_answer }}</b></p>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+      <a class="back" href="{{ url_for('index') }}">← Back to Home</a>
+    {% endif %}
+
   </div>
 </body>
 </html>

@@ -12,7 +12,7 @@ body {
   margin: 24px auto;
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(28,34,48,0.08);
+  box-shadow: 0 6px 18px rgba(28, 34, 48, 0.08);
   padding: 28px;
 }
 
@@ -22,22 +22,40 @@ h1 {
   color: #1f2937;
 }
 
-.buttons {
+/* === SUBJECT BUTTONS (Home Page) === */
+.button-group {
   display: flex;
   gap: 14px;
   margin-top: 18px;
 }
 
-.big-btn {
+.btn {
   display: inline-block;
   padding: 12px 18px;
   border-radius: 8px;
-  background: #2563eb;
-  color: #fff;
   text-decoration: none;
   font-weight: 600;
+  color: #1448d6fb;
+  transition: transform 0.15s ease, opacity 0.15s ease;
 }
 
+.btn:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+
+/* English Button → Sky Blue */
+.btn.english {
+  background: #22e9cb; /* sky blue */
+}
+
+/* Maths Button → Yellow */
+.btn.maths {
+  background: #facc15; /* bright yellow */
+  color: #111102; /* dark text for contrast */
+}
+
+/* === SETS PAGE === */
 .sets-list {
   list-style: none;
   padding-left: 0;
@@ -47,20 +65,35 @@ h1 {
   margin: 10px 0;
 }
 
-.set-link {
+/* English Sets → Grey */
+.set-link.english {
   text-decoration: none;
-  color: #0f172a;
+  color: #144dd4;
   padding: 10px 12px;
   display: inline-block;
   border-radius: 6px;
-  border: 1px solid transparent;
+  background: #e5e7eb; /* light grey */
+  border: 1px solid #d1d5db;
+}
+.set-link.english:hover {
+  background: #adb0b5;
 }
 
-.set-link:hover {
-  border-color: #e6eefc;
-  background: #f8fafc;
+/* Maths Sets → Green */
+.set-link.maths {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 12px;
+  display: inline-block;
+  border-radius: 6px;
+  background: #1b76aa; 
+  border: 1px solid #d93721;
+}
+.set-link.maths:hover {
+  background: #65c789;
 }
 
+/* === QUIZ === */
 .question-block {
   border-bottom: 1px dashed #e6eefc;
   padding-bottom: 12px;
@@ -102,6 +135,7 @@ input[type="radio"] {
   text-decoration: none;
 }
 
+/* === RESULTS === */
 .results {
   margin-top: 16px;
 }

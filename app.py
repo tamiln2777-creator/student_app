@@ -1,18 +1,14 @@
 from flask import Flask, render_template, request, abort
-import os
-import json
-import glob
+import os, json, glob
 
 app = Flask(__name__)
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
 
 def list_sets_for_subject(subject_prefix):
-    """Return sorted list of filenames (basename without extension) matching prefix."""
     pattern = os.path.join(DATA_DIR, f"{subject_prefix}*.json")
     files = sorted(glob.glob(pattern))
-    sets = [os.path.splitext(os.path.basename(f))[0] for f in files]
-    return sets
+    return [os.path.splitext(os.path.basename(f))[0] for f in files]
 
 def load_questions(set_basename):
     path = os.path.join(DATA_DIR, f"{set_basename}.json")
@@ -22,9 +18,8 @@ def load_questions(set_basename):
         data = json.load(f)
     questions = []
     for i, q in enumerate(data, start=1):
-        qid = q.get("id", i)
         questions.append({
-            "id": qid,
+            "id": i,
             "question": q.get("question", ""),
             "options": q.get("options", []),
             "answer": q.get("answer", "")
@@ -33,13 +28,11 @@ def load_questions(set_basename):
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("index.html", page="home")
 
 @app.route("/subject/<subject>")
 def show_sets(subject):
-    # subject should be 'english' or 'maths'
     subject = subject.lower()
-
     if subject == "english":
         sets = list_sets_for_subject("english_synonyms_set")
         display_sets = [f"Synonyms Set {i+1}" for i in range(len(sets))]
@@ -49,15 +42,13 @@ def show_sets(subject):
     else:
         abort(404)
 
-    # zip both actual filenames and display names
     combined_sets = list(zip(sets, display_sets))
-
-    return render_template("sets.html", subject=subject.capitalize(), combined_sets=combined_sets)
+    return render_template("index.html", page="sets", subject=subject.capitalize(), combined_sets=combined_sets)
 
 @app.route("/quiz/<setname>", methods=["GET", "POST"])
 def quiz(setname):
     questions = load_questions(setname)
-    if questions is None:
+    if not questions:
         abort(404)
 
     if request.method == "POST":
@@ -66,27 +57,23 @@ def quiz(setname):
         details = []
 
         for q in questions:
-            uid = str(q["id"])
-            user_ans = user_answers.get(f"q_{uid}")
-            correct_ans = q["answer"]
-            is_correct = (user_ans == correct_ans)
+            user_ans = user_answers.get(f"q_{q['id']}")
+            is_correct = (user_ans == q["answer"])
             if is_correct:
                 correct += 1
-
             details.append({
-                "id": uid,
+                "id": q["id"],
                 "question": q["question"],
                 "options": q["options"],
                 "user_answer": user_ans,
-                "correct_answer": correct_ans,
+                "correct_answer": q["answer"],
                 "is_correct": is_correct
             })
 
-        score = correct
         total = len(questions)
-        return render_template("result.html", setname=setname, total=total, score=score, details=details)
-
-    return render_template("quiz.html", setname=setname, questions=questions)
+        return render_template("index.html", page="result", setname=setname, total=total, score=correct, details=details)
+    else:
+        return render_template("index.html", page="quiz", setname=setname, questions=questions)
 
 if __name__ == "__main__":
     app.run(debug=True)
